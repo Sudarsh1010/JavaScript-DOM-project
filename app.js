@@ -2,6 +2,8 @@ const list = document.querySelector('#anime-list ul');
 const addAnime = document.forms['add-anime'];
 const hideBox = document.querySelector('#hide');
 const searchBar = document.forms['search-anime'].querySelector('input');
+const tabs = document.querySelector('#tabs');
+const panels = document.querySelectorAll('.panel');
 
 // Delete Anime
 
@@ -54,6 +56,7 @@ searchBar.addEventListener('keyup', function(e){
 
     Array.from(anime).forEach(function(sauce){
         const title = sauce.firstElementChild.textContent;
+        
         if(title.toLowerCase().indexOf(term) != -1){
             sauce.style.display = "block";
         } else {
@@ -64,11 +67,10 @@ searchBar.addEventListener('keyup', function(e){
 
 // Tabbed Content
 
-const tabs = document.querySelector('#tabs');
-const panels = document.querySelectorAll('.panel');
 tabs.addEventListener('click', function(e){
     if(e.target.tagName == "LI"){
         const targetPanel = document.querySelector(e.target.dataset.target);
+
         panels.forEach(function(panel){
             if(panel === targetPanel) {
                 panel.classList.add('active');

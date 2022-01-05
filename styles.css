@@ -127,7 +127,7 @@ h1, h2{
 }
 
 
-#tabbed-content li{
+#tabbed-content li.tabs-title{
     display: inline-block;
     padding: 10px 14px;
     background: #9361bf96;
@@ -145,7 +145,10 @@ h1, h2{
     background: #eee ;
 }
 
+#tabbed-content .panel li{
+    padding: 10px 14px;
+}
+
 #tabbed-content .panel.active{
     display: block;
 }
-

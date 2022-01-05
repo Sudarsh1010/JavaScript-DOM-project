@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" />
+	<title>JavaScript DOM Project-1</title>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="page-banner">
+				<h1 class="title">Anime</h1>
+				<p>Anime to be added in my fav-list</p>
+				<form id="search-anime">
+					<input type="text" placeholder="Search anime..." />
+				</form>
+			</div>
+		</header>
+
+		<div id="anime-list">
+			<h2 class="title">Favourite Anime</h2>
+			<ul>
+				<li>
+					<span class="name">Naruto</span>
+					<span class="delete">delete</span>
+				</li>
+				<li>
+					<span class="name">Sword Art Online</span>
+					<span class="delete">delete</span>
+				</li>
+				<li>
+					<span class="name">Clannad & Clannad: After Story</span>
+					<span class="delete">delete</span>
+				</li>
+				<li>
+					<span class="name">Black Clover</span>
+					<span class="delete">delete</span>
+				</li>
+			</ul>
+		</div>
+
+		<form id="add-anime">
+			<input type="checkbox" id="hide" />
+			<label for="hide">Hide all Anime</label>
+			<input type="text" placeholder="Add a anime sauce..." />
+			<button>Add</button>
+		</form>
+
+		<hr>
+
+		<div id="tabbed-content">
+			<ul id="tabs">
+				<li data-target="#about"> About </li>
+				<li data-target="#contact"> Contact </li>
+			</ul>
+
+			<div class="panel active" id="about">
+				<p>Myself Sudharsan,</p> <br/>
+				<p>Aspiring to be a web/app dev</p>
+			</div>
+
+			<div class="panel" id="contact">
+				<a href="tel:+918056722849">Call/Text me</a>
+				<a href="mailto:sudarshjain1010@gmail.com">Mail</a>
+				<a href="http://https://github.com/Sudarsh1010">GitHub</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>
